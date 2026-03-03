@@ -6,7 +6,7 @@
     <title>La Mano de Dios | Restaurante en Terminal de Cúcuta</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
+    <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
@@ -47,8 +47,12 @@
             transform: scale(1.05);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
         }
+        /* Para que el menú no tape las secciones al hacer clic */
         html {
             scroll-behavior: smooth;
+        }
+        section {
+            scroll-margin-top: 80px;
         }
     </style>
 </head>
@@ -62,7 +66,7 @@
         <span class="hidden md:inline">Pide por WhatsApp</span>
     </a>
 
-    <!-- NAVEGACIÓN -->
+    <!-- NAVEGACIÓN (TUS ENLACES, AHORA FUNCIONAN) -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
@@ -101,10 +105,10 @@
         </div>
     </nav>
 
-    <!-- PORTADA ÚNICA - Foto de comida colombiana real -->
+    <!-- PORTADA - AHORA CON FOTO DE COMIDA COLOMBIANA REAL -->
     <section id="inicio" class="relative h-[600px] overflow-hidden">
-        <!-- Imagen de fondo: plato de comida típica (no Europa, no lujo) -->
-        <img src="https://images.unsplash.com/photo-1632914824219-72c7c26c606b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+        <!-- Imagen de fondo: bandeja paisa (comida típica colombiana) -->
+        <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
              alt="Bandeja paisa, comida típica colombiana" 
              class="absolute inset-0 w-full h-full object-cover">
         <!-- Capa oscura suave -->
@@ -143,25 +147,23 @@
         </div>
     </section>
 
-    <!-- FOTOS DEL RESTAURANTE -->
+    <!-- TUS FOTOS (SE QUEDAN IGUAL) -->
     <section class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Así es <span class="text-purple-700">La Mano de Dios</span></h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Foto 1 -->
+                <!-- Foto 1 (TUYA) -->
                 <div class="rounded-2xl overflow-hidden shadow-xl">
                     <img src="foto1.jpg" alt="Platillos del restaurante" 
-                         class="w-full h-80 object-cover"
-                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'">
+                         class="w-full h-80 object-cover">
                     <div class="p-4 bg-purple-50">
                         <p class="text-center text-purple-800 font-medium">Nuestros platos</p>
                     </div>
                 </div>
-                <!-- Foto 2 -->
+                <!-- Foto 2 (TUYA) -->
                 <div class="rounded-2xl overflow-hidden shadow-xl">
                     <img src="foto2.jpg" alt="Ambiente del restaurante" 
-                         class="w-full h-80 object-cover"
-                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'">
+                         class="w-full h-80 object-cover">
                     <div class="p-4 bg-purple-50">
                         <p class="text-center text-purple-800 font-medium">Nuestro local</p>
                     </div>
@@ -171,7 +173,7 @@
     </section>
 
     <!-- MENÚ (AHORA SÍ FUNCIONA) -->
-    <section id="menu" class="py-16 bg-gray-100 scroll-mt-16">
+    <section id="menu" class="py-16 bg-gray-100">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">🍽️ Nuestro Menú</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -224,7 +226,7 @@
     </section>
 
     <!-- UBICACIÓN -->
-    <section id="ubicacion" class="py-16 bg-white scroll-mt-16">
+    <section id="ubicacion" class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">📍 Encuéntranos</h2>
             <div class="bg-purple-50 rounded-2xl p-8">
@@ -265,7 +267,7 @@
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="py-16 bg-purple-700 text-white scroll-mt-16">
+    <section id="contacto" class="py-16 bg-purple-700 text-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-6">¿Listo para comer rico?</h2>
             <p class="text-xl mb-8 opacity-90">Te esperamos en el terminal o pide por WhatsApp</p>
