@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Mano de Dios | Restaurante en Terminal de Cúcuta</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-pattern {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+            background-color: #20ba5c;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- WHATSAPP FLOTANTE (para pedidos directos) -->
+    <a href="https://wa.me/573205135267?text=Hola!%20Vengo%20de%20tu%20página%20web%20y%20quiero%20hacer%20un%20pedido" 
+       class="whatsapp-float" 
+       target="_blank">
+        <i class="fab fa-whatsapp text-2xl"></i>
+        <span class="hidden md:inline">Pide por WhatsApp</span>
+    </a>
+
+    <!-- NAVEGACIÓN SIMPLE -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-purple-700">🙏 La Mano de Dios</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-purple-600 transition">Inicio</a>
+                    <a href="#menu" class="text-gray-700 hover:text-purple-600 transition">Menú</a>
+                    <a href="#ubicacion" class="text-gray-700 hover:text-purple-600 transition">Ubicación</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-purple-600 transition">Contacto</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Bienvenida con el nuevo eslogan) -->
+    <section id="inicio" class="hero-pattern text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">🙌 Restaurante <span class="text-yellow-300">La Mano de Dios</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-semibold">
+                "El terminal tiene un sabor: La Mano de Dios"
+            </p>
+            <p class="text-lg md:text-xl mb-12 max-w-2xl mx-auto opacity-90">
+                Desayunos, almuerzos, empanadas, churros y papas. 
+                El mejor sabor cucuteño en el Terminal de Transportes.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#menu" class="bg-yellow-400 text-purple-900 px-8 py-3 rounded-full font-bold text-lg hover:bg-yellow-300 transition shadow-lg">
+                    Ver Menú
+                </a>
+                <a href="#ubicacion" class="bg-white text-purple-700 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg">
+                    Cómo llegar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRASE DESTACADA (refuerzo del eslogan) -->
+    <section class="py-10 bg-purple-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-2xl md:text-3xl italic text-purple-800 font-semibold">
+                "El terminal tiene un sabor: La Mano de Dios"
+            </p>
+            <p class="text-purple-600 mt-2">— Atendido por sus propietarios, con el cariño de siempre —</p>
+        </div>
+    </section>
+
+    <!-- FOTOS (aquí pones las tuyas) -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Así es <span class="text-purple-700">La Mano de Dios</span></h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Foto 1 -->
+                <div class="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition">
+                    <img src="foto1.jpg" alt="Platillos del restaurante La Mano de Dios" 
+                         class="w-full h-80 object-cover hover:scale-105 transition duration-500"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Foto+1+del+Restaurante'">
+                    <div class="p-4 bg-purple-50">
+                        <p class="text-center text-purple-800 font-medium">Nuestros deliciosos platos</p>
+                    </div>
+                </div>
+                <!-- Foto 2 -->
+                <div class="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition">
+                    <img src="foto2.jpg" alt="Ambiente del restaurante La Mano de Dios" 
+                         class="w-full h-80 object-cover hover:scale-105 transition duration-500"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Foto+2+del+Restaurante'">
+                    <div class="p-4 bg-purple-50">
+                        <p class="text-center text-purple-800 font-medium">El calor de nuestro servicio</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-600 mt-6">
+                *Reemplaza "foto1.jpg" y "foto2.jpg" con las imágenes reales de tu restaurante
+            </p>
+        </div>
+    </section>
+
+    <!-- MENÚ DESTACADO -->
+    <section id="menu" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">🍽️ Nuestro Menú</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Todo lo que tu antojo pida, fresco y preparado al momento
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Desayunos -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+                    <div class="text-4xl mb-4 text-center">🌅</div>
+                    <h3 class="text-xl font-bold text-center text-purple-700 mb-3">Desayunos</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex justify-between"><span>Calentado</span><span class="font-semibold">$8.000</span></li>
+                        <li class="flex justify-between"><span>Huevos pericos</span><span class="font-semibold">$7.000</span></li>
+                        <li class="flex justify-between"><span>Changua</span><span class="font-semibold">$6.500</span></li>
+                        <li class="flex justify-between"><span>Chocolate con queso</span><span class="font-semibold">$5.000</span></li>
+                    </ul>
+                </div>
+                
+                <!-- Almuerzos -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+                    <div class="text-4xl mb-4 text-center">🍲</div>
+                    <h3 class="text-xl font-bold text-center text-purple-700 mb-3">Almuerzos</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex justify-between"><span>Bandeja paisa</span><span class="font-semibold">$15.000</span></li>
+                        <li class="flex justify-between"><span>Sobrebarriga</span><span class="font-semibold">$14.000</span></li>
+                        <li class="flex justify-between"><span>Pechuga a la plancha</span><span class="font-semibold">$13.000</span></li>
+                        <li class="flex justify-between"><span>Mondongo</span><span class="font-semibold">$12.000</span></li>
+                        <li class="flex justify-between"><span>Corriente</span><span class="font-semibold">$10.000</span></li>
+                    </ul>
+                </div>
+                
+                <!-- Pasabocas (empanadas, churros, papas) -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+                    <div class="text-4xl mb-4 text-center">🥟</div>
+                    <h3 class="text-xl font-bold text-center text-purple-700 mb-3">Pasabocas</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex justify-between"><span>Empanadas (carne/pollo)</span><span class="font-semibold">$2.500 c/u</span></li>
+                        <li class="flex justify-between"><span>Churros (dulce de leche)</span><span class="font-semibold">$3.000 c/u</span></li>
+                        <li class="flex justify-between"><span>Papas rellenas</span><span class="font-semibold">$4.000</span></li>
+                        <li class="flex justify-between"><span>Porción de papas fritas</span><span class="font-semibold">$5.000</span></li>
+                        <li class="flex justify-between"><span>Salchipapas</span><span class="font-semibold">$8.000</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600">*Precios aproximados. Consulta por promociones del día.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN EXACTA (con mapa y referencias) -->
+    <section id="ubicacion" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">📍 Encuéntranos</h2>
+            <div class="bg-purple-50 rounded-2xl p-8 mb-8">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-purple-800 mb-4">Terminal de Transportes de Cúcuta</h3>
+                        <div class="space-y-4 text-gray-700 text-lg">
+                            <p class="flex items-start gap-3">
+                                <i class="fas fa-location-dot text-purple-600 mt-1"></i>
+                                <span><strong>Local 076, Raya 74</strong><br>Frente a la salida de las camionetas, al final del terminal</span>
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <i class="fas fa-phone text-purple-600"></i>
+                                <span><strong>3205135267</strong> (también WhatsApp)</span>
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <i class="fas fa-clock text-purple-600"></i>
+                                <span><strong>Lunes a Domingo:</strong> 6:00 AM - 8:00 PM</span>
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <i class="fas fa-user-check text-purple-600"></i>
+                                <span><strong>Atendido por:</strong> Sus propietarios, con el mismo cariño de siempre</span>
+                            </p>
+                        </div>
+                        <div class="mt-6 flex gap-4">
+                            <a href="https://waze.com/ul?ll=7.8931,-72.5078&navigate=yes" target="_blank" 
+                               class="bg-blue-500 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-600 transition">
+                                <i class="fab fa-waze"></i> Waze
+                            </a>
+                            <a href="https://maps.google.com/?q=Terminal+de+Transportes+Cúcuta+Colombia" target="_blank"
+                               class="bg-red-500 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-red-600 transition">
+                                <i class="fas fa-map-pin"></i> Google Maps
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-200 h-64 rounded-xl flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-map-marked-alt text-5xl text-purple-400 mb-3"></i>
+                            <p class="text-gray-600">Mapa interactivo aquí<br><small>Reemplazar con mapa real</small></p>
+                        </div>
+                        <!-- Aquí puedes poner un iframe de Google Maps después -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO DIRECTO -->
+    <section id="contacto" class="py-16 bg-purple-700 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">¿Listo para comer rico?</h2>
+            <p class="text-xl mb-8 opacity-90">Te esperamos en el terminal. O pide por WhatsApp, te llevamos tu pedido.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/573205135267" target="_blank" 
+                   class="bg-green-400 text-purple-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-green-300 transition flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-2xl"></i> Pide ya
+                </a>
+                <a href="tel:+573205135267" 
+                   class="bg-white text-purple-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition flex items-center justify-center gap-2">
+                    <i class="fas fa-phone-alt"></i> Llamar ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-lg">🙏 Restaurante <span class="text-purple-400">La Mano de Dios</span></p>
+            <p class="mt-2">"El terminal tiene un sabor: La Mano de Dios" — Terminal de Transportes, Cúcuta</p>
+            <div class="flex justify-center gap-6 mt-4">
+                <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="mt-6 text-sm text-gray-500">© 2026 La Mano de Dios. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para el menú móvil (opcional) -->
+    <script>
+        // Esto es solo para que el botón de menú móvil funcione si quieres
+        console.log("Página lista para servirte con amor");
+    </script>
+</body>
+</html>
