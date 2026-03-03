@@ -102,17 +102,12 @@
         </div>
     </nav>
 
-    <!-- PORTADA CON BANDEJA PAISA COLOMBIANA REAL -->
+    <!-- PORTADA CON portada.jpeg -->
     <section id="inicio" class="relative h-[500px] overflow-hidden">
-        <!-- Imagen de bandeja paisa auténtica colombiana -->
-        <img src="https://images.unsplash.com/photo-1632914824219-72c7c26c606b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-             alt="Bandeja paisa colombiana auténtica" 
+        <img src="portada.jpeg" 
+             alt="Comida típica de Cúcuta" 
              class="absolute inset-0 w-full h-full object-cover object-center">
-        
-        <!-- Capa oscura suave para legibilidad -->
         <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-        
-        <!-- Texto en la parte inferior (sin tapar el plato) -->
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/70 to-transparent pt-16 pb-6">
             <div class="max-w-4xl mx-auto text-center text-white px-4">
                 <h1 class="text-4xl md:text-5xl font-bold mb-2">🙌 Restaurante <span class="text-yellow-300">La Mano de Dios</span></h1>
@@ -134,14 +129,14 @@
         </div>
     </section>
 
-    <!-- TUS FOTOS -->
+    <!-- TUS FOTOS (foto1.jpg y foto2.jpg) -->
     <section class="py-10 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-2xl font-bold text-center mb-6">Bienvenidos <span class="text-purple-700">a tu Restaurante La Mano de Dios</span></h2>
+            <h2 class="text-2xl font-bold text-center mb-6">Así es <span class="text-purple-700">La Mano de Dios</span></h2>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="rounded-lg overflow-hidden shadow-md">
                     <img src="foto1.jpg" alt="Platillos del restaurante" class="w-full h-64 object-cover">
-                    <div class="p-2 bg-purple-50 text-center text-sm">Vista Diagonal desde la zona de Carga, parte interna</div>
+                    <div class="p-2 bg-purple-50 text-center text-sm">Nuestros platos típicos</div>
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-md">
                     <img src="foto2.jpg" alt="Ambiente del restaurante" class="w-full h-64 object-cover">
@@ -190,14 +185,13 @@
         </div>
     </section>
 
-    <!-- UBICACIÓN CON MAPA (VISUAL) -->
+    <!-- UBICACIÓN CON MAPA -->
     <section id="ubicacion" class="py-10 bg-white">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-2xl font-bold text-center mb-4">📍 Ubicación exacta</h2>
             
             <div class="bg-purple-50 rounded-lg p-6 mb-4">
                 <div class="grid md:grid-cols-2 gap-6">
-                    <!-- Dirección y datos -->
                     <div>
                         <h3 class="text-xl font-bold text-purple-800 mb-3">Terminal de Transportes de Cúcuta</h3>
                         <p class="flex items-start gap-2 mb-2">
@@ -214,7 +208,6 @@
                         </p>
                     </div>
                     
-                    <!-- Mapa visual (cuadro con colores) -->
                     <div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center border-2 border-purple-300">
                         <div class="text-center">
                             <i class="fas fa-map-marked-alt text-4xl text-purple-500 mb-2"></i>
@@ -226,7 +219,7 @@
                 </div>
             </div>
             
-            <!-- Botones horizontales para acciones -->
+            <!-- Botones horizontales -->
             <div class="flex flex-wrap justify-center gap-3 mt-2">
                 <a href="https://waze.com/ul?ll=7.8931,-72.5078&navigate=yes" target="_blank" 
                    class="btn-horizontal bg-blue-500 text-white hover:bg-blue-600">
@@ -244,7 +237,6 @@
                    class="btn-horizontal bg-purple-600 text-white hover:bg-purple-700">
                     <i class="fas fa-phone-alt"></i> Llamar
                 </a>
-                <!-- NUEVO BOTÓN COMPARTIR -->
                 <button onclick="compartirPagina()" 
                         class="btn-horizontal bg-gray-600 text-white hover:bg-gray-700">
                     <i class="fas fa-share-alt"></i> Compartir
@@ -253,7 +245,7 @@
         </div>
     </section>
 
-    <!-- CONTACTO RÁPIDO -->
+    <!-- CONTACTO -->
     <section id="contacto" class="py-10 bg-purple-700 text-white">
         <div class="text-center">
             <h2 class="text-2xl font-bold mb-3">¿Listo para comer rico?</h2>
@@ -264,7 +256,7 @@
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA (ORDEN CORRECTO) -->
+    <!-- PIE DE PÁGINA -->
     <footer class="bg-gray-900 text-gray-300 py-6 text-center">
         <p class="text-sm">© 2026 Restaurante La Mano de Dios. Todos los derechos reservados.</p>
         <p class="text-sm mt-1">
@@ -277,9 +269,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript para menú móvil y compartir -->
+    <!-- JavaScript -->
     <script>
-        // Menú móvil
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
@@ -293,7 +284,6 @@
             });
         });
         
-        // Función compartir
         function compartirPagina() {
             if (navigator.share) {
                 navigator.share({
@@ -302,7 +292,6 @@
                     url: window.location.href
                 });
             } else {
-                // Fallback: copiar al portapapeles
                 navigator.clipboard.writeText(window.location.href);
                 alert('¡Enlace copiado al portapapeles! Compártelo con quien quieras.');
             }
