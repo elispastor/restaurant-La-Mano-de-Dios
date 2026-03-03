@@ -37,6 +37,25 @@
             transform: scale(1.05);
             background-color: #20ba5c;
         }
+        .nav-link {
+            transition: all 0.3s;
+        }
+        .nav-link:hover {
+            color: #8b5cf6;
+        }
+        .btn-tarjeta {
+            background: linear-gradient(135deg, #f97316, #dc2626);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .btn-tarjeta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -49,20 +68,37 @@
         <span class="hidden md:inline">Pide por WhatsApp</span>
     </a>
 
-    <!-- NAVEGACIÓN SIMPLE -->
+    <!-- NAVEGACIÓN MEJORADA con enlace a tarjeta -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
                     <span class="text-2xl font-bold text-purple-700">🙏 La Mano de Dios</span>
                 </div>
-                <div class="hidden md:flex space-x-8">
+                
+                <!-- Menú escritorio -->
+                <div class="hidden md:flex items-center space-x-6">
                     <a href="#inicio" class="text-gray-700 hover:text-purple-600 transition">Inicio</a>
                     <a href="#menu" class="text-gray-700 hover:text-purple-600 transition">Menú</a>
                     <a href="#ubicacion" class="text-gray-700 hover:text-purple-600 transition">Ubicación</a>
                     <a href="#contacto" class="text-gray-700 hover:text-purple-600 transition">Contacto</a>
+                    
+                    <!-- NUEVO: Botón para pedir tarjeta -->
+                    <a href="https://wa.me/573205135267?text=Hola!%20Quiero%20una%20tarjeta%20digital%20como%20la%20de%20La%20Mano%20de%20Dios%20para%20mi%20negocio" 
+                       target="_blank"
+                       class="btn-tarjeta flex items-center gap-2">
+                        <i class="fas fa-crown"></i>
+                        <span>QUIERO UNA TARJETA IGUAL</span>
+                    </a>
                 </div>
-                <div class="md:hidden">
+                
+                <!-- Menú móvil simplificado -->
+                <div class="md:hidden flex items-center gap-2">
+                    <a href="https://wa.me/573205135267?text=Hola!%20Quiero%20una%20tarjeta%20digital%20como%20la%20de%20La%20Mano%20de%20Dios%20para%20mi%20negocio" 
+                       target="_blank"
+                       class="btn-tarjeta text-sm py-1 px-3">
+                        <i class="fas fa-crown"></i> Tarjeta
+                    </a>
                     <button class="text-gray-700">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
@@ -71,29 +107,39 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION (Bienvenida con el nuevo eslogan) -->
-    <section id="inicio" class="hero-pattern text-white py-20">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4">🙌 Restaurante <span class="text-yellow-300">La Mano de Dios</span></h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-semibold">
-                "El terminal tiene un sabor: La Mano de Dios"
-            </p>
-            <p class="text-lg md:text-xl mb-12 max-w-2xl mx-auto opacity-90">
-                Desayunos, almuerzos, empanadas, churros y papas. 
-                El mejor sabor cucuteño en el Terminal de Transportes.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#menu" class="bg-yellow-400 text-purple-900 px-8 py-3 rounded-full font-bold text-lg hover:bg-yellow-300 transition shadow-lg">
-                    Ver Menú
-                </a>
-                <a href="#ubicacion" class="bg-white text-purple-700 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg">
-                    Cómo llegar
-                </a>
+    <!-- NUEVA PORTADA: Foto general de restaurante -->
+    <section id="inicio" class="relative h-[500px] overflow-hidden">
+        <!-- Imagen de fondo (restaurante general) -->
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+             alt="Ambiente de restaurante" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <!-- Capa oscura para que se lea el texto -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        
+        <!-- Contenido sobre la imagen -->
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center text-white px-4 max-w-4xl">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">🙌 Restaurante <span class="text-yellow-300">La Mano de Dios</span></h1>
+                <p class="text-2xl md:text-3xl mb-6 font-semibold">
+                    "El terminal tiene un sabor: La Mano de Dios"
+                </p>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                    Desayunos, almuerzos, empanadas, churros y papas. 
+                    El mejor sabor cucuteño en el Terminal de Transportes.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#menu" class="bg-yellow-400 text-purple-900 px-8 py-3 rounded-full font-bold text-lg hover:bg-yellow-300 transition shadow-lg">
+                        Ver Menú
+                    </a>
+                    <a href="#ubicacion" class="bg-white text-purple-700 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg">
+                        Cómo llegar
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FRASE DESTACADA (refuerzo del eslogan) -->
+    <!-- FRASE DESTACADA -->
     <section class="py-10 bg-purple-100">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <p class="text-2xl md:text-3xl italic text-purple-800 font-semibold">
@@ -103,7 +149,7 @@
         </div>
     </section>
 
-    <!-- FOTOS (aquí pones las tuyas) -->
+    <!-- FOTOS DEL RESTAURANTE -->
     <section class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Así es <span class="text-purple-700">La Mano de Dios</span></h2>
@@ -112,7 +158,7 @@
                 <div class="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition">
                     <img src="foto1.jpg" alt="Platillos del restaurante La Mano de Dios" 
                          class="w-full h-80 object-cover hover:scale-105 transition duration-500"
-                         onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Foto+1+del+Restaurante'">
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'">
                     <div class="p-4 bg-purple-50">
                         <p class="text-center text-purple-800 font-medium">Nuestros deliciosos platos</p>
                     </div>
@@ -121,19 +167,16 @@
                 <div class="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition">
                     <img src="foto2.jpg" alt="Ambiente del restaurante La Mano de Dios" 
                          class="w-full h-80 object-cover hover:scale-105 transition duration-500"
-                         onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Foto+2+del+Restaurante'">
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80'">
                     <div class="p-4 bg-purple-50">
                         <p class="text-center text-purple-800 font-medium">El calor de nuestro servicio</p>
                     </div>
                 </div>
             </div>
-            <p class="text-center text-gray-600 mt-6">
-                *Reemplaza "foto1.jpg" y "foto2.jpg" con las imágenes reales de tu restaurante
-            </p>
         </div>
     </section>
 
-    <!-- MENÚ DESTACADO -->
+    <!-- MENÚ DESTACADO (AHORA FUNCIONAL) -->
     <section id="menu" class="py-16 bg-gray-100">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">🍽️ Nuestro Menú</h2>
@@ -167,7 +210,7 @@
                     </ul>
                 </div>
                 
-                <!-- Pasabocas (empanadas, churros, papas) -->
+                <!-- Pasabocas -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
                     <div class="text-4xl mb-4 text-center">🥟</div>
                     <h3 class="text-xl font-bold text-center text-purple-700 mb-3">Pasabocas</h3>
@@ -187,7 +230,7 @@
         </div>
     </section>
 
-    <!-- UBICACIÓN EXACTA (con mapa y referencias) -->
+    <!-- UBICACIÓN -->
     <section id="ubicacion" class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">📍 Encuéntranos</h2>
@@ -210,7 +253,7 @@
                             </p>
                             <p class="flex items-center gap-3">
                                 <i class="fas fa-user-check text-purple-600"></i>
-                                <span><strong>Atendido por:</strong> Sus propietarios, con el mismo cariño de siempre</span>
+                                <span><strong>Atendido por:</strong> Sus propietarios</span>
                             </p>
                         </div>
                         <div class="mt-6 flex gap-4">
@@ -227,16 +270,15 @@
                     <div class="bg-gray-200 h-64 rounded-xl flex items-center justify-center">
                         <div class="text-center">
                             <i class="fas fa-map-marked-alt text-5xl text-purple-400 mb-3"></i>
-                            <p class="text-gray-600">Mapa interactivo aquí<br><small>Reemplazar con mapa real</small></p>
+                            <p class="text-gray-600">Mapa del Terminal<br><small>Local 076, Raya 74</small></p>
                         </div>
-                        <!-- Aquí puedes poner un iframe de Google Maps después -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACTO DIRECTO -->
+    <!-- CONTACTO -->
     <section id="contacto" class="py-16 bg-purple-700 text-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-6">¿Listo para comer rico?</h2>
@@ -254,11 +296,32 @@
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA -->
+    <!-- PIE DE PÁGINA MEJORADO -->
     <footer class="bg-gray-900 text-gray-300 py-8">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <p class="text-lg">🙏 Restaurante <span class="text-purple-400">La Mano de Dios</span></p>
             <p class="mt-2">"El terminal tiene un sabor: La Mano de Dios" — Terminal de Transportes, Cúcuta</p>
+            
+            <!-- NUEVO: Diseño NGE con enlace -->
+            <p class="mt-4 text-sm">
+                Diseño: 
+                <a href="https://wa.me/573205135267?text=Hola!%20Vi%20la%20tarjeta%20de%20La%20Mano%20de%20Dios%20y%20quiero%20una%20para%20mi%20negocio" 
+                   target="_blank"
+                   class="text-purple-400 hover:text-purple-300 font-semibold underline decoration-1">
+                    NGE tarjeta digital
+                </a>
+                — ¡Tú también puedes tener la tuya!
+            </p>
+            
+            <!-- Botón pequeño para móvil -->
+            <div class="mt-4 md:hidden">
+                <a href="https://wa.me/573205135267?text=Hola!%20Quiero%20una%20tarjeta%20digital%20como%20la%20de%20La%20Mano%20de%20Dios%20para%20mi%20negocio" 
+                   target="_blank"
+                   class="inline-block bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <i class="fas fa-crown"></i> Quiero mi tarjeta digital
+                </a>
+            </div>
+            
             <div class="flex justify-center gap-6 mt-4">
                 <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
@@ -267,11 +330,5 @@
             <p class="mt-6 text-sm text-gray-500">© 2026 La Mano de Dios. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <!-- Script para el menú móvil (opcional) -->
-    <script>
-        // Esto es solo para que el botón de menú móvil funcione si quieres
-        console.log("Página lista para servirte con amor");
-    </script>
 </body>
 </html>
